@@ -6,3 +6,7 @@ Select * From Categories;
 Select City from Customers;
 Select CategoryName,Description from Customers;
 Select CategoryName, Descripton from Categories order by CategoryName desc;
+Select * from Heroes3 where sibilings = 3;
+Select * from Heroes where (id%2)=0;
+Select * from Products Where CategoryId=3 AND Price >10;
+Select * from Product where CategoryID IN (2,3)
