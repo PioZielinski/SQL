@@ -1,0 +1,8 @@
+CREATE TABLE Heroes3 (id int, name varchar(25), siblings int);
+Insert into Heroes3 values (1,'Chuck Norris', 2);
+Insert into Heroes3 values (2,'Steven Segal',3);
+Select * From Heroes;
+Select * From Categories;
+Select City from Customers;
+Select CategoryName,Description from Customers;
+Select CategoryName, Descripton from Categories order by CategoryName desc;
