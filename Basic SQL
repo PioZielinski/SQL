@@ -10,3 +10,37 @@ Select * from Heroes3 where sibilings = 3;
 Select * from Heroes where (id%2)=0;
 Select * from Products Where CategoryId=3 AND Price >10;
 Select * from Product where CategoryID IN (2,3)
+
+Nubers of rows must be identical and they have to the same format,
+-----------------------------------------------------------------
+query 1 ABC   
+query 2 CDE
+UNION, ("UNION DISTINCT" Z USUNIĘCIEM WSZYSTKICH DUPLIKATÓW)
+ABCDE
+------------------------------------------------------------
+query 1 ABC
+query 2 CDE
+UNION ALL (DODAWANIE WSZYSTKIE WIERSZE RAZEM Z DUPLIKATAMI)
+ABCCDE
+-----------------------------------------------------------------
+query 1 ABC
+query 2 CDE
+INTERSECT  (CZĘŚĆ WSPÓLNA)
+C
+-----------------------------------------------------------------------------------
+query 1 ABC
+query 2 CDE
+EXCEPT (ODEJMOWANIE)
+AB
+--------------------------------------------------------------------------------------
+2.Subquerries
+Select Sid,Sname
+From Student
+Where Sid in(select Sid from Apply where major = 'CS');
+
+
+
+
+
+
+
