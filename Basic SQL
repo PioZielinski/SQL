@@ -38,6 +38,33 @@ Select Sid,Sname
 From Student
 Where Sid in(select Sid from Apply where major = 'CS');
 
+---------------------------------------------------------------------------------------
+Selecr 'City',City from Customer;
+SELECT 'miasto',City FROM Customers;
+SELECT Address, PostalCode/100  FROM Customers;
+SELECT Address, PostalCode - 10000  FROM Customers;
+SELECT CustomerID, Address, City, Address + ' ' + City FROM Customers;
+SELECT CustomerID, Address, City, Address || '     ' || City FROM Customers;
+SELECT CustomerID, Address, City, Address || '     ' || City as 'dane adresowe' FROM Customers;
+--------------------------------------------------------------------------------------------
+SELECT * from customers order by Country asc;
+SELECT * from customers order by Country, CustomerID asc;
+SELECT Address || ' ' || City as 'nazwa' from customers order by nazwa asc;
+SELECT CustomerID,Address FROM [Customers] order by CustomerID,Address;
+SELECT CustomerID, ContactName  FROM [Customers]  where City ='Berlin';
+SELECT * FROM [Customers] where PostalCode >80000 order by City;
+SELECT * FROM [Customers] where PostalCode >80000 and PostalCode<90000 order by City;
+SELECT * FROM [Customers] where  not PostalCode >80000 and PostalCode<90000 order by City;
+SELECT * FROM [Customers] where   ContactName <> 'Giovanni Rovelli' and  PostalCode>80000  order by City;
+SELECT * FROM [Customers] where   ContactName <> 'Giovanni Rovelli' and ContactName <> 'Paula Wilson' and  PostalCode>80000  order by City;
+SELECT PostalCode FROM [Customers] where Postalcode between 0 and 10000;
+SELECT CustomerId, City FROM Customers WHERE Country IN ('Germany' , 'Mexico','UK') ;
+SELECT CustomerId, City FROM Customers WHERE Country NOT  IN ('Germany' , 'Mexico','UK') ;
+SELECT * FROM [Customers] where City like '%erl%';
+SELECT * FROM [Customers] where City like 'i%';
+SELECT distinct  ContactName   FROM [Customers];
+-----------------------------------------------------------------------------------------------------------
+
 
 
 
