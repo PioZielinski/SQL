@@ -64,7 +64,7 @@ SELECT * FROM [Customers] where City like '%erl%';
 SELECT * FROM [Customers] where City like 'i%';
 SELECT distinct  ContactName   FROM [Customers];
 -----------------------------------------------------------------------------------------------------------
-
+SELECT CustomerId, Address, AVG (PostalCode) as 'kod pocztowy' FROM [Customers] group by address, postalCode order by CustomerId;
 
 
 
